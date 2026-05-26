@@ -15,10 +15,31 @@ const dmSans = DM_Sans({
   weight: ["300", "400", "500"],
 });
 
+const siteUrl = "https://sathv1ka.github.io";
+const description =
+  "Finance + Math + CS @ Ohio State · ML & Fintech · AI & Automation Intern @ Nationwide";
+
 export const metadata: Metadata = {
-  title: "Sathvik Allipuram",
-  description:
-    "Finance + Math + CS @ Ohio State · ML & Fintech · Incoming Nationwide Technology Intern",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Sathvik Allipuram — SWE · ML & Fintech",
+    template: "%s · Sathvik Allipuram",
+  },
+  description,
+  openGraph: {
+    type: "website",
+    url: siteUrl,
+    siteName: "Sathvik Allipuram",
+    title: "Sathvik Allipuram — SWE · ML & Fintech",
+    description,
+    images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sathvik Allipuram — SWE · ML & Fintech",
+    description,
+    images: ["/opengraph-image.png"],
+  },
 };
 
 export default function RootLayout({
@@ -29,13 +50,13 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${syne.variable} ${dmSans.variable} font-body bg-[#0a0f1e] text-slate-300 antialiased`}
+        className={`${syne.variable} ${dmSans.variable} page-shell font-body bg-slate-50 text-slate-700 antialiased`}
       >
         <Navbar />
         {children}
-        <footer className="border-t border-slate-900">
+        <footer className="border-t border-slate-200 bg-white">
           <div className="max-w-5xl mx-auto px-6 py-8">
-            <p className="text-slate-700 text-xs font-mono">
+            <p className="text-slate-400 text-xs font-mono">
               © {new Date().getFullYear()} Sathvik Allipuram
             </p>
           </div>

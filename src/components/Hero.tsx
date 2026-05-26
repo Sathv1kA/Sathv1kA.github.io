@@ -1,80 +1,206 @@
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background glows */}
-      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-500/[0.07] rounded-full blur-3xl translate-x-1/3 -translate-y-1/3 pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-700/[0.05] rounded-full blur-3xl -translate-x-1/3 translate-y-1/3 pointer-events-none" />
+    <section
+      className="relative min-h-screen overflow-hidden"
+      style={{
+        background:
+          "linear-gradient(150deg, #0ea5e9 0%, #38bdf8 30%, #7dd3fc 65%, #bae6fd 100%)",
+      }}
+    >
+      {/* Cloud blobs */}
+      <div className="absolute -bottom-8 -left-16 w-96 h-56 bg-white/25 rounded-full blur-2xl" />
+      <div className="absolute bottom-28 left-[18%] w-72 h-44 bg-white/20 rounded-full blur-xl" />
+      <div className="absolute top-[18%] -right-16 w-80 h-60 bg-white/20 rounded-full blur-2xl" />
+      <div className="absolute bottom-20 right-[12%] w-64 h-44 bg-sky-100/40 rounded-full blur-xl" />
+      <div className="absolute top-[45%] left-[3%] w-48 h-32 bg-white/15 rounded-full blur-xl" />
+      <div className="absolute top-[8%] left-[40%] w-56 h-36 bg-white/10 rounded-full blur-2xl" />
 
-      <div className="relative max-w-5xl mx-auto px-6 w-full pt-20 pb-32">
-        {/* Label */}
-        <p
-          className="opacity-0 animate-fade-up flex items-center gap-3 text-xs text-blue-400 font-mono tracking-widest uppercase mb-8"
-          style={{ animationDelay: "0.1s" }}
+      {/* Bottom wave transition to page */}
+      <div className="absolute bottom-0 left-0 right-0">
+        <svg
+          viewBox="0 0 1440 80"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none"
+          className="w-full h-20 block"
         >
-          <span className="w-8 h-px bg-blue-400/60" />
-          CS · Finance · Mathematics — The Ohio State University
-        </p>
-
-        {/* Name */}
-        <h1
-          className="opacity-0 animate-fade-up font-heading font-extrabold text-white leading-[0.93] tracking-tight mb-8"
-          style={{
-            fontSize: "clamp(3.2rem, 10vw, 6.5rem)",
-            animationDelay: "0.2s",
-          }}
-        >
-          Sathvik
-          <br />
-          Allipuram
-        </h1>
-
-        {/* Tagline */}
-        <p
-          className="opacity-0 animate-fade-up text-slate-400 text-base md:text-lg max-w-lg leading-relaxed mb-12"
-          style={{ animationDelay: "0.38s" }}
-        >
-          ML &amp; Fintech builder · Incoming Nationwide Technology Intern ·
-          IBM Hackathon Winner
-        </p>
-
-        {/* CTAs */}
-        <div
-          className="opacity-0 animate-fade-up flex flex-wrap gap-3"
-          style={{ animationDelay: "0.52s" }}
-        >
-          <a
-            href="/projects"
-            className="px-6 py-3 bg-blue-500 hover:bg-blue-400 text-white text-sm font-medium rounded-lg transition-colors duration-200"
-          >
-            View Projects
-          </a>
-          <a
-            href="https://github.com/Sathv1kA"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-6 py-3 border border-slate-700 hover:border-blue-500/60 text-slate-300 hover:text-white text-sm font-medium rounded-lg transition-all duration-200"
-          >
-            GitHub ↗
-          </a>
-          <a
-            href="/resume.pdf"
-            download
-            className="px-6 py-3 border border-slate-700 hover:border-blue-500/60 text-slate-300 hover:text-white text-sm font-medium rounded-lg transition-all duration-200"
-          >
-            Resume ↓
-          </a>
-        </div>
+          <path
+            d="M0,40 C240,80 480,10 720,45 C960,80 1200,20 1440,45 L1440,80 L0,80 Z"
+            fill="#f8fafc"
+          />
+        </svg>
       </div>
 
-      {/* Scroll cue */}
-      <div
-        className="opacity-0 animate-fade-up absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
-        style={{ animationDelay: "0.9s" }}
-      >
-        <span className="text-slate-600 text-[10px] font-mono tracking-widest uppercase">
-          scroll
-        </span>
-        <div className="w-px h-10 bg-gradient-to-b from-slate-600 to-transparent" />
+      <div className="relative max-w-5xl mx-auto px-6 flex items-center min-h-screen">
+        <div className="grid md:grid-cols-2 gap-12 items-center w-full pt-16 pb-28">
+          {/* Left: text content */}
+          <div>
+            <p
+              className="text-sky-900/70 text-sm font-medium mb-5 opacity-0 animate-fade-up"
+              style={{ animationDelay: "0.1s" }}
+            >
+              CS · Finance · Mathematics · Ohio State University
+            </p>
+            <h1
+              className="font-heading font-extrabold text-slate-900 leading-tight tracking-tight mb-2 opacity-0 animate-fade-up"
+              style={{
+                fontSize: "clamp(2.4rem, 6vw, 4rem)",
+                animationDelay: "0.2s",
+              }}
+            >
+              Hi, I am Sathvik
+            </h1>
+            <p
+              className="font-heading font-bold text-blue-600 mb-6 opacity-0 animate-fade-up"
+              style={{
+                fontSize: "clamp(1.5rem, 4vw, 2.5rem)",
+                animationDelay: "0.28s",
+              }}
+            >
+              ML &amp; Fintech Developer
+            </p>
+            <p
+              className="text-slate-700 text-base leading-relaxed max-w-md mb-8 opacity-0 animate-fade-up"
+              style={{ animationDelay: "0.38s" }}
+            >
+              Building at the intersection of software and finance. AI &amp; Automation Intern @ Nationwide · 2× Hackathon Winner · U.S. Patent Holder.
+            </p>
+
+            {/* Social icons */}
+            <div
+              className="flex items-center gap-5 mb-8 opacity-0 animate-fade-up"
+              style={{ animationDelay: "0.46s" }}
+            >
+              <a
+                href="https://github.com/Sathv1kA"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-600 hover:text-blue-600 transition-colors duration-200"
+                aria-label="GitHub"
+              >
+                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    fillRule="evenodd"
+                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://linkedin.com/in/sathvik-allipuram"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-600 hover:text-blue-600 transition-colors duration-200"
+                aria-label="LinkedIn"
+              >
+                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                </svg>
+              </a>
+              <a
+                href="mailto:sathvik.allipuram@gmail.com"
+                className="text-slate-600 hover:text-blue-600 transition-colors duration-200"
+                aria-label="Email"
+              >
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.8}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+                  />
+                </svg>
+              </a>
+            </div>
+
+            {/* CTA buttons */}
+            <div
+              className="flex flex-wrap gap-3 opacity-0 animate-fade-up"
+              style={{ animationDelay: "0.56s" }}
+            >
+              <a
+                href="/resume.pdf"
+                download
+                className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-lg font-medium transition-colors duration-200 shadow-lg shadow-blue-500/25"
+              >
+                Resume
+              </a>
+              <a
+                href="/projects"
+                className="bg-white/50 hover:bg-white/75 border border-white/60 text-slate-700 hover:text-slate-900 px-6 py-3 rounded-lg font-medium transition-all duration-200 backdrop-blur-sm"
+              >
+                View Projects
+              </a>
+            </div>
+          </div>
+
+          {/* Right: code window */}
+          <div
+            className="hidden md:block opacity-0 animate-fade-up"
+            style={{ animationDelay: "0.3s" }}
+          >
+            <div className="relative">
+              <div className="bg-slate-900/85 rounded-2xl p-5 shadow-2xl border border-white/10 backdrop-blur-sm">
+                <div className="flex items-center gap-2 mb-4 pb-3 border-b border-slate-700/50">
+                  <div className="w-3 h-3 rounded-full bg-red-400" />
+                  <div className="w-3 h-3 rounded-full bg-yellow-400" />
+                  <div className="w-3 h-3 rounded-full bg-green-400" />
+                  <span className="ml-2 text-slate-500 text-xs font-mono">
+                    profile.py
+                  </span>
+                </div>
+                <div className="font-mono text-sm space-y-1 leading-relaxed">
+                  <p>
+                    <span className="text-purple-400">class </span>
+                    <span className="text-green-400">Sathvik</span>
+                    <span className="text-slate-400">:</span>
+                  </p>
+                  <p className="pl-4">
+                    <span className="text-blue-400">school</span>
+                    <span className="text-slate-500"> = </span>
+                    <span className="text-orange-300">&quot;Ohio State&quot;</span>
+                  </p>
+                  <p className="pl-4">
+                    <span className="text-blue-400">gpa</span>
+                    <span className="text-slate-500"> = </span>
+                    <span className="text-yellow-400">3.92</span>
+                  </p>
+                  <p className="pl-4">
+                    <span className="text-blue-400">focus</span>
+                    <span className="text-slate-500"> = </span>
+                    <span className="text-orange-300">&quot;ML &amp; Fintech&quot;</span>
+                  </p>
+                  <p className="pl-4">
+                    <span className="text-blue-400">wins</span>
+                    <span className="text-slate-500"> = [</span>
+                  </p>
+                  <p className="pl-8">
+                    <span className="text-orange-300">&quot;IBM Hackathon 🥇&quot;</span>
+                    <span className="text-slate-500">,</span>
+                  </p>
+                  <p className="pl-8">
+                    <span className="text-orange-300">&quot;Anthropic Hackathon 🥈&quot;</span>
+                    <span className="text-slate-500">,</span>
+                  </p>
+                  <p className="pl-8">
+                    <span className="text-orange-300">&quot;USPTO Patent&quot;</span>
+                    <span className="text-slate-500">,</span>
+                  </p>
+                  <p className="pl-4">
+                    <span className="text-slate-500">]</span>
+                  </p>
+                </div>
+              </div>
+              <div className="absolute -top-3 -right-3 bg-blue-500 text-white text-xs font-mono px-3 py-1.5 rounded-full shadow-lg border border-blue-400">
+                Interning @ Nationwide
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
