@@ -2,22 +2,9 @@ export default function Hero() {
   return (
     <section
       className="relative min-h-screen overflow-hidden"
-      style={{
-        background:
-          "linear-gradient(150deg, #0ea5e9 0%, #38bdf8 30%, #7dd3fc 65%, #bae6fd 100%)",
-      }}
+      style={{ backgroundColor: "#1d1d1f" }}
     >
-      {/* Cloud blobs */}
-      <div aria-hidden="true">
-        <div className="absolute -bottom-8 -left-16 w-96 h-56 bg-white/25 rounded-full blur-2xl" />
-        <div className="absolute bottom-28 left-[18%] w-72 h-44 bg-white/20 rounded-full blur-xl" />
-        <div className="absolute top-[18%] -right-16 w-80 h-60 bg-white/20 rounded-full blur-2xl" />
-        <div className="absolute bottom-20 right-[12%] w-64 h-44 bg-sky-100/40 rounded-full blur-xl" />
-        <div className="absolute top-[45%] left-[3%] w-48 h-32 bg-white/15 rounded-full blur-xl" />
-        <div className="absolute top-[8%] left-[40%] w-56 h-36 bg-white/10 rounded-full blur-2xl" />
-      </div>
-
-      {/* Bottom wave transition to page */}
+      {/* Bottom wave → parchment */}
       <div className="absolute bottom-0 left-0 right-0" aria-hidden="true">
         <svg
           viewBox="0 0 1440 80"
@@ -27,44 +14,53 @@ export default function Hero() {
         >
           <path
             d="M0,40 C240,80 480,10 720,45 C960,80 1200,20 1440,45 L1440,80 L0,80 Z"
-            fill="#f8fafc"
+            fill="#f5f5f7"
           />
         </svg>
       </div>
 
       <div className="relative max-w-5xl mx-auto px-6 flex items-center min-h-screen">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full min-w-0 pt-16 pb-28">
-          {/* Left: text content */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full min-w-0 pt-[44px] pb-28">
+          {/* Left: text */}
           <div className="min-w-0">
             <p
-              className="text-sky-950 text-sm font-medium mb-5 opacity-0 animate-fade-up"
+              className="text-[#86868b] text-sm font-medium mb-5 opacity-0 animate-fade-up tracking-wide"
               style={{ animationDelay: "0.1s" }}
             >
               CS · Finance · Mathematics · Ohio State University
             </p>
             <h1
-              className="font-heading font-extrabold text-slate-900 leading-tight tracking-tight mb-2 opacity-0 animate-fade-up break-words"
+              className="font-heading font-semibold text-white leading-tight mb-2 opacity-0 animate-fade-up break-words"
               style={{
-                fontSize: "clamp(2rem, 6vw, 4rem)",
+                fontSize: "clamp(2rem, 6vw, 3.5rem)",
+                letterSpacing: "-0.02em",
                 animationDelay: "0.2s",
               }}
             >
               Hi, I am Sathvik
             </h1>
             <p
-              className="font-heading font-bold text-blue-800 mb-6 opacity-0 animate-fade-up"
+              className="font-heading font-semibold text-[#2997ff] mb-6 opacity-0 animate-fade-up"
               style={{
-                fontSize: "clamp(1.5rem, 4vw, 2.5rem)",
+                fontSize: "clamp(1.3rem, 3.5vw, 1.9rem)",
+                letterSpacing: "-0.01em",
                 animationDelay: "0.28s",
               }}
             >
               ML &amp; Fintech Developer
             </p>
             <p
-              className="text-slate-700 text-base leading-relaxed max-w-md mb-8 opacity-0 animate-fade-up"
-              style={{ animationDelay: "0.38s" }}
+              className="text-[#86868b] max-w-md mb-8 opacity-0 animate-fade-up"
+              style={{
+                fontSize: "17px",
+                lineHeight: "1.47",
+                letterSpacing: "-0.374px",
+                animationDelay: "0.38s",
+              }}
             >
-              Curious builder who loves to learn — from ML systems to fintech products to anything in between. AI &amp; Automation Intern @ Nationwide · 2× Hackathon Winner · U.S. Patent Holder.
+              Curious builder who loves to learn — from ML systems to fintech
+              products to anything in between. AI &amp; Automation Intern @
+              Nationwide · 2× Hackathon Winner · U.S. Patent Holder.
             </p>
 
             {/* Social icons */}
@@ -76,10 +72,10 @@ export default function Hero() {
                 href="https://github.com/Sathv1kA"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-slate-600 hover:text-blue-600 transition-colors duration-200"
+                className="text-[#86868b] hover:text-white transition-colors duration-200"
                 aria-label="GitHub"
               >
-                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                   <path
                     fillRule="evenodd"
                     d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
@@ -91,20 +87,20 @@ export default function Hero() {
                 href="https://linkedin.com/in/sathvik-allipuram"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-slate-600 hover:text-blue-600 transition-colors duration-200"
+                className="text-[#86868b] hover:text-white transition-colors duration-200"
                 aria-label="LinkedIn"
               >
-                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                 </svg>
               </a>
               <a
                 href="mailto:sathvik.allipuram@gmail.com"
-                className="text-slate-600 hover:text-blue-600 transition-colors duration-200"
+                className="text-[#86868b] hover:text-white transition-colors duration-200"
                 aria-label="Email"
               >
                 <svg
-                  className="w-6 h-6"
+                  className="w-5 h-5"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -119,7 +115,7 @@ export default function Hero() {
               </a>
             </div>
 
-            {/* CTA buttons */}
+            {/* CTAs */}
             <div
               className="flex flex-wrap gap-3 opacity-0 animate-fade-up"
               style={{ animationDelay: "0.56s" }}
@@ -127,13 +123,15 @@ export default function Hero() {
               <a
                 href="/resume.pdf"
                 download
-                className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-lg font-medium transition-colors duration-200 shadow-lg shadow-blue-500/25"
+                className="bg-[#0066cc] hover:bg-[#0071e3] active:scale-95 text-white px-[22px] py-[11px] rounded-full font-normal transition-all duration-200"
+                style={{ fontSize: "17px", letterSpacing: "-0.374px" }}
               >
                 Resume
               </a>
               <a
                 href="/projects"
-                className="bg-white/50 hover:bg-white/75 border border-white/60 text-slate-700 hover:text-slate-900 px-6 py-3 rounded-lg font-medium transition-all duration-200 backdrop-blur-sm"
+                className="border border-white/25 hover:border-white/50 active:scale-95 text-white px-[22px] py-[11px] rounded-full font-normal transition-all duration-200"
+                style={{ fontSize: "17px", letterSpacing: "-0.374px" }}
               >
                 View Projects
               </a>
@@ -147,12 +145,12 @@ export default function Hero() {
             aria-hidden="true"
           >
             <div className="relative">
-              <div className="bg-slate-900/85 rounded-2xl p-5 shadow-2xl border border-white/10 backdrop-blur-sm">
-                <div className="flex items-center gap-2 mb-4 pb-3 border-b border-slate-700/50">
-                  <div className="w-3 h-3 rounded-full bg-red-400" />
-                  <div className="w-3 h-3 rounded-full bg-yellow-400" />
-                  <div className="w-3 h-3 rounded-full bg-green-400" />
-                  <span className="ml-2 text-slate-500 text-xs font-mono">
+              <div className="bg-black/50 rounded-[18px] p-5 border border-white/10">
+                <div className="flex items-center gap-2 mb-4 pb-3 border-b border-white/10">
+                  <div className="w-3 h-3 rounded-full bg-red-500/70" />
+                  <div className="w-3 h-3 rounded-full bg-yellow-500/70" />
+                  <div className="w-3 h-3 rounded-full bg-green-500/70" />
+                  <span className="ml-2 text-[#7a7a7a] text-xs font-mono">
                     profile.py
                   </span>
                 </div>
@@ -160,45 +158,47 @@ export default function Hero() {
                   <p>
                     <span className="text-purple-400">class </span>
                     <span className="text-green-400">Sathvik</span>
-                    <span className="text-slate-400">:</span>
+                    <span className="text-[#7a7a7a]">:</span>
                   </p>
                   <p className="pl-4">
-                    <span className="text-blue-400">school</span>
-                    <span className="text-slate-500"> = </span>
+                    <span className="text-[#2997ff]">school</span>
+                    <span className="text-[#7a7a7a]"> = </span>
                     <span className="text-orange-300">&quot;Ohio State&quot;</span>
                   </p>
                   <p className="pl-4">
-                    <span className="text-blue-400">gpa</span>
-                    <span className="text-slate-500"> = </span>
+                    <span className="text-[#2997ff]">gpa</span>
+                    <span className="text-[#7a7a7a]"> = </span>
                     <span className="text-yellow-400">3.92</span>
                   </p>
                   <p className="pl-4">
-                    <span className="text-blue-400">focus</span>
-                    <span className="text-slate-500"> = </span>
+                    <span className="text-[#2997ff]">focus</span>
+                    <span className="text-[#7a7a7a]"> = </span>
                     <span className="text-orange-300">&quot;ML &amp; Fintech&quot;</span>
                   </p>
                   <p className="pl-4">
-                    <span className="text-blue-400">wins</span>
-                    <span className="text-slate-500"> = [</span>
+                    <span className="text-[#2997ff]">wins</span>
+                    <span className="text-[#7a7a7a]"> = [</span>
                   </p>
                   <p className="pl-8">
                     <span className="text-orange-300">&quot;IBM Hackathon 🥇&quot;</span>
-                    <span className="text-slate-500">,</span>
+                    <span className="text-[#7a7a7a]">,</span>
                   </p>
                   <p className="pl-8">
-                    <span className="text-orange-300">&quot;Anthropic Hackathon 🥈&quot;</span>
-                    <span className="text-slate-500">,</span>
+                    <span className="text-orange-300">
+                      &quot;Anthropic Hackathon 🥈&quot;
+                    </span>
+                    <span className="text-[#7a7a7a]">,</span>
                   </p>
                   <p className="pl-8">
                     <span className="text-orange-300">&quot;USPTO Patent&quot;</span>
-                    <span className="text-slate-500">,</span>
+                    <span className="text-[#7a7a7a]">,</span>
                   </p>
                   <p className="pl-4">
-                    <span className="text-slate-500">]</span>
+                    <span className="text-[#7a7a7a]">]</span>
                   </p>
                 </div>
               </div>
-              <div className="absolute -top-3 -right-3 bg-blue-500 text-white text-xs font-mono px-3 py-1.5 rounded-full shadow-lg border border-blue-400">
+              <div className="absolute -top-3 -right-3 bg-[#0066cc] text-white text-xs font-mono px-3 py-1.5 rounded-full">
                 Interning @ Nationwide
               </div>
             </div>

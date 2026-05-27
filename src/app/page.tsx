@@ -5,17 +5,18 @@ import AnimateIn from "@/components/AnimateIn";
 const featuredProjects = [
   {
     name: "CLARA",
-    tagline: "Full-stack portfolio risk dashboard — live P&L, VaR, Monte Carlo, real-time alerts",
+    tagline:
+      "Full-stack portfolio risk dashboard — live P&L, VaR, Monte Carlo, real-time alerts",
     tech: ["React.js", "Python", "Alpha Vantage", "EmailJS"],
     badge: "🥇 IBM Hackathon · 1st Place",
-    badgeStyle: "text-yellow-600 bg-yellow-50 border-yellow-200",
+    badgeStyle: "text-yellow-700 bg-yellow-50 border-yellow-200",
   },
   {
     name: "TokenLens",
     tagline: "Detect LLM API calls across 6 SDKs and estimate token costs per repo",
     tech: ["Python", "FastAPI", "TypeScript"],
     badge: "🥈 Anthropic OSU Hackathon · 2nd Place",
-    badgeStyle: "text-slate-500 bg-slate-100 border-slate-300",
+    badgeStyle: "text-[#7a7a7a] bg-[#f5f5f7] border-[#e0e0e0]",
   },
   {
     name: "NYC Housing Insights",
@@ -23,7 +24,7 @@ const featuredProjects = [
       "Dashboard for 27,039 NYC real estate transactions with XGBoost model (R²=0.9903)",
     tech: ["React", "TypeScript", "XGBoost"],
     badge: "DATA_IO Hackathon",
-    badgeStyle: "text-purple-600 bg-purple-50 border-purple-200",
+    badgeStyle: "text-purple-700 bg-purple-50 border-purple-200",
   },
 ];
 
@@ -33,31 +34,37 @@ export default function Home() {
       <Hero />
 
       {/* Selected Work */}
-      <section className="max-w-5xl mx-auto px-6 py-24">
+      <section className="max-w-5xl mx-auto px-6 py-20">
         <AnimateIn>
           <div className="flex items-end justify-between mb-10">
-            <h2 className="font-heading text-3xl font-bold text-slate-800">
+            <h2
+              className="font-heading text-3xl font-semibold text-[#1d1d1f]"
+              style={{ letterSpacing: "-0.02em" }}
+            >
               Selected Work
             </h2>
             <Link
               href="/projects"
-              className="text-sm text-blue-500 hover:text-blue-600 transition-colors duration-200"
+              className="text-sm text-[#0066cc] hover:text-[#0071e3] transition-colors duration-200"
             >
               View all →
             </Link>
           </div>
         </AnimateIn>
 
-        <div className="space-y-4">
+        <div className="space-y-3">
           {featuredProjects.map((project, i) => (
             <AnimateIn key={project.name} delay={i * 80}>
               <Link
                 href="/projects"
-                className="group flex items-center justify-between rounded-lg border border-slate-200 bg-white px-6 py-4 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-md"
+                className="group flex items-center justify-between rounded-[18px] border border-[#e0e0e0] bg-white px-6 py-4 transition-all duration-200 hover:-translate-y-0.5 hover:border-[#0066cc]/30 hover:shadow-sm"
               >
                 <div className="min-w-0">
                   <div className="flex flex-wrap items-center gap-2 mb-1">
-                    <h3 className="font-heading text-slate-800 font-semibold">
+                    <h3
+                      className="font-heading text-[#1d1d1f] font-semibold"
+                      style={{ letterSpacing: "-0.374px" }}
+                    >
                       {project.name}
                     </h3>
                     {project.badge && (
@@ -68,7 +75,10 @@ export default function Home() {
                       </span>
                     )}
                   </div>
-                  <p className="text-slate-600 text-sm leading-relaxed">
+                  <p
+                    className="text-[#7a7a7a] text-sm leading-relaxed"
+                    style={{ letterSpacing: "-0.224px" }}
+                  >
                     {project.tagline}
                   </p>
                 </div>
@@ -78,13 +88,13 @@ export default function Home() {
                     {project.tech.map((t) => (
                       <span
                         key={t}
-                        className="rounded-full border border-blue-200 bg-blue-50 px-2 py-0.5 text-xs text-blue-600"
+                        className="rounded-full border border-[#e0e0e0] bg-[#f5f5f7] px-2 py-0.5 text-xs text-[#333333]"
                       >
                         {t}
                       </span>
                     ))}
                   </div>
-                  <span className="text-slate-400 transition-colors duration-200 group-hover:text-blue-500">
+                  <span className="text-[#7a7a7a] transition-colors duration-200 group-hover:text-[#0066cc]">
                     →
                   </span>
                 </div>
@@ -95,28 +105,37 @@ export default function Home() {
       </section>
 
       {/* About teaser */}
-      <section className="max-w-5xl mx-auto px-6 pb-24">
+      <section className="max-w-5xl mx-auto px-6 pb-20">
         <AnimateIn>
-          <div className="rounded-lg border border-slate-200 bg-white p-8 shadow-sm md:p-12">
+          <div className="rounded-[18px] border border-[#e0e0e0] bg-white p-8 md:p-12">
             <div className="grid md:grid-cols-[1fr_auto] gap-8 items-center">
               <div>
-                <h2 className="font-heading text-2xl font-bold text-slate-800 mb-3">
+                <h2
+                  className="font-heading text-2xl font-semibold text-[#1d1d1f] mb-3"
+                  style={{ letterSpacing: "-0.02em" }}
+                >
                   Curious by nature, builder by habit
                 </h2>
-                <p className="text-slate-600 text-sm leading-relaxed max-w-lg">
-                  Sophomore at Ohio State studying Finance, Math, and CS. I love learning — picking up new skills, exploring ideas, and building things that actually work. 3.92 GPA · AI &amp; Automation Intern @ Nationwide · 2× Hackathon Winner · U.S. Patent Holder.
+                <p
+                  className="text-[#7a7a7a] text-sm leading-relaxed max-w-lg"
+                  style={{ letterSpacing: "-0.224px" }}
+                >
+                  Sophomore at Ohio State studying Finance, Math, and CS. I love
+                  learning — picking up new skills, exploring ideas, and building
+                  things that actually work. 3.92 GPA · AI &amp; Automation
+                  Intern @ Nationwide · 2× Hackathon Winner · U.S. Patent Holder.
                 </p>
               </div>
               <div className="flex md:flex-col gap-3">
                 <Link
                   href="/about"
-                  className="rounded-lg bg-blue-500 hover:bg-blue-600 px-5 py-2.5 text-center text-sm font-medium text-white transition-colors duration-200 shadow-sm"
+                  className="rounded-full bg-[#0066cc] hover:bg-[#0071e3] active:scale-95 px-[22px] py-[11px] text-center text-sm font-normal text-white transition-all duration-200"
                 >
                   About Me
                 </Link>
                 <Link
                   href="/about#contact"
-                  className="rounded-lg border border-slate-200 px-5 py-2.5 text-center text-sm font-medium text-slate-600 transition-colors duration-200 hover:border-blue-300 hover:text-blue-600"
+                  className="rounded-full border border-[#e0e0e0] px-[22px] py-[11px] text-center text-sm font-normal text-[#0066cc] transition-all duration-200 hover:border-[#0066cc]/40"
                 >
                   Contact
                 </Link>
