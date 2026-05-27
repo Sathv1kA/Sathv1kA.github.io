@@ -3,18 +3,18 @@
 @tailwind utilities;
 
 html {
-  background: #f5f5f7;
+  background: #f8fafc;
 }
 
 body {
   min-height: 100vh;
-  background: #f5f5f7;
+  background: #f8fafc;
 }
 
 @keyframes fadeUp {
   0% {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(24px);
   }
   100% {
     opacity: 1;
@@ -30,8 +30,8 @@ body {
 }
 
 ::selection {
-  background-color: rgba(0, 102, 204, 0.15);
-  color: #0066cc;
+  background-color: rgba(59, 130, 246, 0.2);
+  color: #1d4ed8;
 }
 
 ::-webkit-scrollbar {
@@ -39,14 +39,14 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f5f5f7;
+  background: #f1f5f9;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #d2d2d7;
+  background: #93c5fd;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #0066cc;
+  background: #3b82f6;
 }

@@ -1,6 +1,19 @@
 import type { Metadata } from "next";
+import { Syne, DM_Sans } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import "./globals.css";
+
+const syne = Syne({
+  subsets: ["latin"],
+  variable: "--font-syne",
+  weight: ["400", "600", "700", "800"],
+});
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  variable: "--font-dm-sans",
+  weight: ["300", "400", "500"],
+});
 
 const siteUrl = "https://sathv1ka.github.io";
 const description =
@@ -36,18 +49,20 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className="page-shell font-body bg-[#f5f5f7] text-[#1d1d1f] antialiased">
+      <body
+        className={`${syne.variable} ${dmSans.variable} page-shell font-body bg-slate-50 text-slate-700 antialiased`}
+      >
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:text-[#0066cc] focus:shadow-lg"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:text-blue-600 focus:shadow-lg focus:ring-2 focus:ring-blue-500"
         >
           Skip to content
         </a>
         <Navbar />
         {children}
-        <footer className="bg-[#f5f5f7] border-t border-[#e0e0e0]">
+        <footer className="border-t border-slate-200 bg-white">
           <div className="max-w-5xl mx-auto px-6 py-8">
-            <p className="text-[#7a7a7a] text-xs">
+            <p className="text-slate-400 text-xs font-mono">
               © {new Date().getFullYear()} Sathvik Allipuram
             </p>
           </div>
