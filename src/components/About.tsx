@@ -14,15 +14,12 @@ export default function About() {
       <AnimateIn delay={100}>
         <div className="flex flex-col-reverse md:flex-row gap-10 items-start mb-12">
           <p className="text-slate-600 text-base md:text-lg leading-relaxed max-w-2xl">
-            I&apos;m a sophomore at Ohio State studying Finance, Mathematics,
-            and Computer Science with a 3.92 GPA. I&apos;m driven by curiosity
-            and a love of learning — I enjoy exploring new ideas, picking up new
-            skills, and building things that work. I completed a financial co-op
-            at Nationwide analyzing $100B+ in investments, currently intern on
-            their AI &amp; Automation team, hold a U.S. patent, and won 1st at
-            the IBM Buckeye Hackathon and 2nd at the Anthropic OSU Claude
-            Hackathon. Actively targeting Summer 2027 software engineering and
-            tech internships.
+            Sophomore at Ohio State triple-majoring in Finance, Math, and CS —
+            not because I had to, but because I genuinely like all three. I
+            learn fastest by building: I&apos;ve shipped ML risk tools, LLM
+            analyzers, and real estate dashboards; interned at Nationwide twice;
+            won two hackathons; and somehow ended up with a U.S. patent. Always
+            working on something. Open to Summer 2027 SWE internships.
           </p>
           <div className="shrink-0">
             <Image
