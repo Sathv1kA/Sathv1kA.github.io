@@ -52,6 +52,12 @@ export default function RootLayout({
       <body
         className={`${syne.variable} ${dmSans.variable} page-shell font-body bg-slate-50 text-slate-700 antialiased`}
       >
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:text-blue-600 focus:shadow-lg focus:ring-2 focus:ring-blue-500"
+        >
+          Skip to content
+        </a>
         <Navbar />
         {children}
         <footer className="border-t border-slate-200 bg-white">

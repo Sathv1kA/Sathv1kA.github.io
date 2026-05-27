@@ -7,7 +7,6 @@ const featuredProjects = [
     name: "CLARA",
     tagline: "Full-stack portfolio risk dashboard — live P&L, VaR, Monte Carlo, real-time alerts",
     tech: ["React.js", "Python", "Alpha Vantage", "EmailJS"],
-    link: "https://github.com/Sathv1kA/CLARA",
     badge: "🥇 IBM Hackathon · 1st Place",
     badgeStyle: "text-yellow-600 bg-yellow-50 border-yellow-200",
   },
@@ -15,7 +14,6 @@ const featuredProjects = [
     name: "TokenLens",
     tagline: "Detect LLM API calls across 6 SDKs and estimate token costs per repo",
     tech: ["Python", "FastAPI", "TypeScript"],
-    link: "https://github.com/Sathv1kA/LLMeter",
     badge: "🥈 Anthropic OSU Hackathon · 2nd Place",
     badgeStyle: "text-slate-500 bg-slate-100 border-slate-300",
   },
@@ -24,7 +22,6 @@ const featuredProjects = [
     tagline:
       "Dashboard for 27,039 NYC real estate transactions with XGBoost model (R²=0.9903)",
     tech: ["React", "TypeScript", "XGBoost"],
-    link: "https://github.com/Sathv1kA/NYC-Housing-Insights-DataIO-Hackathon",
     badge: "DATA_IO Hackathon",
     badgeStyle: "text-purple-600 bg-purple-50 border-purple-200",
   },
@@ -32,7 +29,7 @@ const featuredProjects = [
 
 export default function Home() {
   return (
-    <main>
+    <main id="main-content">
       <Hero />
 
       {/* Selected Work */}
@@ -54,10 +51,8 @@ export default function Home() {
         <div className="space-y-4">
           {featuredProjects.map((project, i) => (
             <AnimateIn key={project.name} delay={i * 80}>
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/projects"
                 className="group flex items-center justify-between rounded-lg border border-slate-200 bg-white px-6 py-4 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-md"
               >
                 <div className="min-w-0">
@@ -90,10 +85,10 @@ export default function Home() {
                     ))}
                   </div>
                   <span className="text-slate-400 transition-colors duration-200 group-hover:text-blue-500">
-                    ↗
+                    →
                   </span>
                 </div>
-              </a>
+              </Link>
             </AnimateIn>
           ))}
         </div>
@@ -106,10 +101,10 @@ export default function Home() {
             <div className="grid md:grid-cols-[1fr_auto] gap-8 items-center">
               <div>
                 <h2 className="font-heading text-2xl font-bold text-slate-800 mb-3">
-                  Finance + CS @ Ohio State
+                  Curious by nature, builder by habit
                 </h2>
                 <p className="text-slate-600 text-sm leading-relaxed max-w-lg">
-                  Building at the intersection of software and finance — from ML-powered risk platforms to full-stack fintech apps. 3.92 GPA · AI &amp; Automation Intern @ Nationwide · Investment Controllership Co-op · 2× Hackathon Winner · U.S. Patent Holder.
+                  Sophomore at Ohio State studying Finance, Math, and CS. I love learning — picking up new skills, exploring ideas, and building things that actually work. 3.92 GPA · AI &amp; Automation Intern @ Nationwide · 2× Hackathon Winner · U.S. Patent Holder.
                 </p>
               </div>
               <div className="flex md:flex-col gap-3">
@@ -120,7 +115,7 @@ export default function Home() {
                   About Me
                 </Link>
                 <Link
-                  href="/contact"
+                  href="/about#contact"
                   className="rounded-lg border border-slate-200 px-5 py-2.5 text-center text-sm font-medium text-slate-600 transition-colors duration-200 hover:border-blue-300 hover:text-blue-600"
                 >
                   Contact

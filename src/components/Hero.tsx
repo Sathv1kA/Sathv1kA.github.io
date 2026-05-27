@@ -8,15 +8,17 @@ export default function Hero() {
       }}
     >
       {/* Cloud blobs */}
-      <div className="absolute -bottom-8 -left-16 w-96 h-56 bg-white/25 rounded-full blur-2xl" />
-      <div className="absolute bottom-28 left-[18%] w-72 h-44 bg-white/20 rounded-full blur-xl" />
-      <div className="absolute top-[18%] -right-16 w-80 h-60 bg-white/20 rounded-full blur-2xl" />
-      <div className="absolute bottom-20 right-[12%] w-64 h-44 bg-sky-100/40 rounded-full blur-xl" />
-      <div className="absolute top-[45%] left-[3%] w-48 h-32 bg-white/15 rounded-full blur-xl" />
-      <div className="absolute top-[8%] left-[40%] w-56 h-36 bg-white/10 rounded-full blur-2xl" />
+      <div aria-hidden="true">
+        <div className="absolute -bottom-8 -left-16 w-96 h-56 bg-white/25 rounded-full blur-2xl" />
+        <div className="absolute bottom-28 left-[18%] w-72 h-44 bg-white/20 rounded-full blur-xl" />
+        <div className="absolute top-[18%] -right-16 w-80 h-60 bg-white/20 rounded-full blur-2xl" />
+        <div className="absolute bottom-20 right-[12%] w-64 h-44 bg-sky-100/40 rounded-full blur-xl" />
+        <div className="absolute top-[45%] left-[3%] w-48 h-32 bg-white/15 rounded-full blur-xl" />
+        <div className="absolute top-[8%] left-[40%] w-56 h-36 bg-white/10 rounded-full blur-2xl" />
+      </div>
 
       {/* Bottom wave transition to page */}
-      <div className="absolute bottom-0 left-0 right-0">
+      <div className="absolute bottom-0 left-0 right-0" aria-hidden="true">
         <svg
           viewBox="0 0 1440 80"
           xmlns="http://www.w3.org/2000/svg"
@@ -31,26 +33,26 @@ export default function Hero() {
       </div>
 
       <div className="relative max-w-5xl mx-auto px-6 flex items-center min-h-screen">
-        <div className="grid md:grid-cols-2 gap-12 items-center w-full pt-16 pb-28">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full min-w-0 pt-16 pb-28">
           {/* Left: text content */}
-          <div>
+          <div className="min-w-0">
             <p
-              className="text-sky-900/70 text-sm font-medium mb-5 opacity-0 animate-fade-up"
+              className="text-sky-950 text-sm font-medium mb-5 opacity-0 animate-fade-up"
               style={{ animationDelay: "0.1s" }}
             >
               CS · Finance · Mathematics · Ohio State University
             </p>
             <h1
-              className="font-heading font-extrabold text-slate-900 leading-tight tracking-tight mb-2 opacity-0 animate-fade-up"
+              className="font-heading font-extrabold text-slate-900 leading-tight tracking-tight mb-2 opacity-0 animate-fade-up break-words"
               style={{
-                fontSize: "clamp(2.4rem, 6vw, 4rem)",
+                fontSize: "clamp(2rem, 6vw, 4rem)",
                 animationDelay: "0.2s",
               }}
             >
               Hi, I am Sathvik
             </h1>
             <p
-              className="font-heading font-bold text-blue-600 mb-6 opacity-0 animate-fade-up"
+              className="font-heading font-bold text-blue-800 mb-6 opacity-0 animate-fade-up"
               style={{
                 fontSize: "clamp(1.5rem, 4vw, 2.5rem)",
                 animationDelay: "0.28s",
@@ -62,7 +64,7 @@ export default function Hero() {
               className="text-slate-700 text-base leading-relaxed max-w-md mb-8 opacity-0 animate-fade-up"
               style={{ animationDelay: "0.38s" }}
             >
-              Building at the intersection of software and finance. AI &amp; Automation Intern @ Nationwide · 2× Hackathon Winner · U.S. Patent Holder.
+              Curious builder who loves to learn — from ML systems to fintech products to anything in between. AI &amp; Automation Intern @ Nationwide · 2× Hackathon Winner · U.S. Patent Holder.
             </p>
 
             {/* Social icons */}
@@ -142,6 +144,7 @@ export default function Hero() {
           <div
             className="hidden md:block opacity-0 animate-fade-up"
             style={{ animationDelay: "0.3s" }}
+            aria-hidden="true"
           >
             <div className="relative">
               <div className="bg-slate-900/85 rounded-2xl p-5 shadow-2xl border border-white/10 backdrop-blur-sm">

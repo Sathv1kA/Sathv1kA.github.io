@@ -6,7 +6,7 @@ export const metadata: Metadata = { title: "Projects" };
 
 export default function ProjectsPage() {
   return (
-    <main className="pt-16">
+    <main id="main-content" className="pt-16">
       <div className="max-w-5xl mx-auto px-6 pt-20 pb-4">
         <AnimateIn>
           <p className="mb-3 text-xs font-mono uppercase tracking-widest text-blue-500/80">

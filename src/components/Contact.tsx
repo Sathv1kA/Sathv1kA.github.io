@@ -22,7 +22,7 @@ const links = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="max-w-5xl mx-auto px-6 py-24">
+    <section id="contact" className="max-w-5xl mx-auto px-6 pb-24">
       <AnimateIn>
         <h2 className="font-heading text-3xl md:text-4xl font-bold text-slate-800 mb-12">
           Contact

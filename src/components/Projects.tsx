@@ -80,7 +80,12 @@ export default function Projects() {
       <div className="space-y-5">
         {/* Featured project */}
         <AnimateIn delay={80}>
-          <div className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-md">
+          <a
+            href={featured.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group block rounded-lg border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-md"
+          >
             <div className="flex flex-wrap items-start justify-between gap-3 mb-3">
               <h3 className="font-heading text-slate-800 font-bold text-xl">
                 {featured.name}
@@ -93,35 +98,35 @@ export default function Projects() {
                 </span>
               )}
             </div>
+            <div className="flex flex-wrap gap-2 mb-3">
+              {featured.tech.map((t) => (
+                <TechBadge key={t} label={t} />
+              ))}
+            </div>
             <p className="text-slate-700 text-sm font-medium mb-2">
               {featured.tagline}
             </p>
-            <p className="text-slate-600 text-sm leading-relaxed mb-5">
+            <p className="text-slate-600 text-sm leading-relaxed mb-4">
               {featured.description}
             </p>
-            <div className="flex items-center justify-between flex-wrap gap-3">
-              <div className="flex flex-wrap gap-2">
-                {featured.tech.map((t) => (
-                  <TechBadge key={t} label={t} />
-                ))}
-              </div>
-              <a
-                href={featured.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs font-mono text-slate-400 transition-colors hover:text-blue-500"
-              >
+            <div className="flex justify-end">
+              <span className="text-xs font-mono text-slate-400 transition-colors group-hover:text-blue-500">
                 → GitHub
-              </a>
+              </span>
             </div>
-          </div>
+          </a>
         </AnimateIn>
 
         {/* Other projects */}
         <div className="grid md:grid-cols-2 gap-5">
           {rest.map((project, i) => (
             <AnimateIn key={project.name} delay={160 + i * 80}>
-              <div className="h-full rounded-lg border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-md">
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group h-full block rounded-lg border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-md"
+              >
                 <div className="flex flex-wrap items-start justify-between gap-2 mb-2">
                   <h3 className="font-heading text-slate-800 font-semibold text-lg">
                     {project.name}
@@ -134,28 +139,23 @@ export default function Projects() {
                     </span>
                   )}
                 </div>
+                <div className="flex flex-wrap gap-2 mb-3">
+                  {project.tech.map((t) => (
+                    <TechBadge key={t} label={t} />
+                  ))}
+                </div>
                 <p className="text-slate-700 text-sm font-medium mb-2">
                   {project.tagline}
                 </p>
-                <p className="text-slate-600 text-sm leading-relaxed mb-5">
+                <p className="text-slate-600 text-sm leading-relaxed mb-4">
                   {project.description}
                 </p>
-                <div className="flex items-center justify-between flex-wrap gap-3">
-                  <div className="flex flex-wrap gap-2">
-                    {project.tech.map((t) => (
-                      <TechBadge key={t} label={t} />
-                    ))}
-                  </div>
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xs font-mono text-slate-400 transition-colors hover:text-blue-500"
-                  >
+                <div className="flex justify-end">
+                  <span className="text-xs font-mono text-slate-400 transition-colors group-hover:text-blue-500">
                     → GitHub
-                  </a>
+                  </span>
                 </div>
-              </div>
+              </a>
             </AnimateIn>
           ))}
         </div>

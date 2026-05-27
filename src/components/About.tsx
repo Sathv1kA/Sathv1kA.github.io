@@ -1,3 +1,4 @@
+import Image from "next/image";
 import AnimateIn from "./AnimateIn";
 
 const stats = [
@@ -11,17 +12,28 @@ export default function About() {
   return (
     <section id="about" className="max-w-5xl mx-auto px-6 py-24">
       <AnimateIn delay={100}>
-        <p className="text-slate-600 text-base md:text-lg leading-relaxed max-w-2xl mb-12">
-          I&apos;m a sophomore at Ohio State studying Finance, Mathematics, and
-          Computer Science with a 3.92 GPA. I build at the intersection of
-          software and finance — from ML-powered risk platforms to full-stack
-          fintech apps. I completed a financial co-op at Nationwide analyzing
-          $100B+ in investments, currently intern on their AI &amp; Automation
-          team, hold a U.S. patent, and won 1st at the IBM Buckeye Hackathon
-          and 2nd at the Anthropic OSU Claude Hackathon. Actively targeting
-          Summer 2027 software engineering, quant finance, and fintech
-          internships.
-        </p>
+        <div className="flex flex-col-reverse md:flex-row gap-10 items-start mb-12">
+          <p className="text-slate-600 text-base md:text-lg leading-relaxed max-w-2xl">
+            I&apos;m a sophomore at Ohio State studying Finance, Mathematics,
+            and Computer Science with a 3.92 GPA. I&apos;m driven by curiosity
+            and a love of learning — I enjoy exploring new ideas, picking up new
+            skills, and building things that work. I completed a financial co-op
+            at Nationwide analyzing $100B+ in investments, currently intern on
+            their AI &amp; Automation team, hold a U.S. patent, and won 1st at
+            the IBM Buckeye Hackathon and 2nd at the Anthropic OSU Claude
+            Hackathon. Actively targeting Summer 2027 software engineering and
+            tech internships.
+          </p>
+          <div className="shrink-0">
+            <Image
+              src="/profile.jpg"
+              alt="Sathvik Allipuram"
+              width={128}
+              height={128}
+              className="w-32 h-32 rounded-full object-cover border-2 border-slate-200 shadow-md"
+            />
+          </div>
+        </div>
       </AnimateIn>
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
