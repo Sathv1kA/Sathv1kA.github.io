@@ -22,10 +22,24 @@ body {
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
 @layer components {
   .page-shell {
     position: relative;
     isolation: isolate;
+  }
+}
+
+@layer base {
+  .font-heading {
+    letter-spacing: -0.02em;
   }
 }
 

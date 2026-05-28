@@ -4,7 +4,7 @@ import AnimateIn from "./AnimateIn";
 const stats = [
   { value: "3.92", label: "GPA" },
   { value: "Patent", label: "USPTO #20210396625" },
-  { value: "2× 🏆", label: "IBM · Anthropic Hackathons" },
+  { value: "2×", label: "IBM · Anthropic Hackathons" },
   { value: "Nationwide", label: "AI & Automation Intern" },
 ];
 
@@ -36,7 +36,7 @@ export default function About() {
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
         {stats.map((stat, i) => (
           <AnimateIn key={stat.label} delay={i * 80}>
-            <div className="rounded-lg border border-slate-200 bg-white p-4 text-center shadow-sm transition-all duration-200 hover:border-blue-300 hover:shadow-md">
+            <div className="rounded-lg border border-slate-200 bg-white p-4 text-center shadow-sm">
               <p className="font-heading text-lg font-bold text-slate-800 mb-1">
                 {stat.value}
               </p>

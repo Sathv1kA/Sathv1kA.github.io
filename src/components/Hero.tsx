@@ -127,13 +127,13 @@ export default function Hero() {
               <a
                 href="/resume.pdf"
                 download
-                className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-lg font-medium transition-colors duration-200 shadow-lg shadow-blue-500/25"
+                className="cursor-pointer bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-lg font-medium transition-colors duration-200 shadow-lg shadow-blue-500/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
               >
                 Resume
               </a>
               <a
                 href="/projects"
-                className="bg-white/50 hover:bg-white/75 border border-white/60 text-slate-700 hover:text-slate-900 px-6 py-3 rounded-lg font-medium transition-all duration-200 backdrop-blur-sm"
+                className="cursor-pointer bg-white/50 hover:bg-white/75 border border-white/60 text-slate-700 hover:text-slate-900 px-6 py-3 rounded-lg font-medium transition-all duration-200 backdrop-blur-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
               >
                 View Projects
               </a>
@@ -182,11 +182,11 @@ export default function Hero() {
                     <span className="text-slate-500"> = [</span>
                   </p>
                   <p className="pl-8">
-                    <span className="text-orange-300">&quot;IBM Hackathon 🥇&quot;</span>
+                    <span className="text-orange-300">&quot;IBM Hackathon — 1st&quot;</span>
                     <span className="text-slate-500">,</span>
                   </p>
                   <p className="pl-8">
-                    <span className="text-orange-300">&quot;Anthropic Hackathon 🥈&quot;</span>
+                    <span className="text-orange-300">&quot;Anthropic Hackathon — 2nd&quot;</span>
                     <span className="text-slate-500">,</span>
                   </p>
                   <p className="pl-8">

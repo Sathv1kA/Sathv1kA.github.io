@@ -7,14 +7,14 @@ const featuredProjects = [
     name: "CLARA",
     tagline: "Full-stack portfolio risk dashboard — live P&L, VaR, Monte Carlo, real-time alerts",
     tech: ["React.js", "Python", "Alpha Vantage", "EmailJS"],
-    badge: "🥇 IBM Hackathon · 1st Place",
+    badge: "IBM Hackathon · 1st Place",
     badgeStyle: "text-yellow-600 bg-yellow-50 border-yellow-200",
   },
   {
     name: "TokenLens",
     tagline: "Detect LLM API calls across 6 SDKs and estimate token costs per repo",
     tech: ["Python", "FastAPI", "TypeScript"],
-    badge: "🥈 Anthropic OSU Hackathon · 2nd Place",
+    badge: "Anthropic Hackathon · 2nd Place",
     badgeStyle: "text-slate-500 bg-slate-100 border-slate-300",
   },
   {
@@ -53,7 +53,7 @@ export default function Home() {
             <AnimateIn key={project.name} delay={i * 80}>
               <Link
                 href="/projects"
-                className="group flex items-center justify-between rounded-lg border border-slate-200 bg-white px-6 py-4 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-md"
+                className="group flex items-center justify-between rounded-lg border border-slate-200 bg-white px-6 py-4 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
               >
                 <div className="min-w-0">
                   <div className="flex flex-wrap items-center gap-2 mb-1">

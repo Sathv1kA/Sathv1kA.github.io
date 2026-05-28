@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Syne, DM_Sans } from "next/font/google";
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import "./globals.css";
 
@@ -61,10 +62,17 @@ export default function RootLayout({
         <Navbar />
         {children}
         <footer className="border-t border-slate-200 bg-white">
-          <div className="max-w-5xl mx-auto px-6 py-8">
+          <div className="max-w-5xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <p className="text-slate-400 text-xs font-mono">
               © {new Date().getFullYear()} Sathvik Allipuram
             </p>
+            <nav className="flex items-center gap-5" aria-label="Footer navigation">
+              <Link href="/" className="text-slate-400 hover:text-slate-600 text-xs font-mono transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded">Home</Link>
+              <Link href="/about" className="text-slate-400 hover:text-slate-600 text-xs font-mono transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded">About</Link>
+              <Link href="/projects" className="text-slate-400 hover:text-slate-600 text-xs font-mono transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded">Projects</Link>
+              <a href="https://github.com/Sathv1kA" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-slate-600 text-xs font-mono transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded">GitHub ↗</a>
+              <a href="https://linkedin.com/in/sathvik-allipuram" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-slate-600 text-xs font-mono transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded">LinkedIn ↗</a>
+            </nav>
           </div>
         </footer>
       </body>

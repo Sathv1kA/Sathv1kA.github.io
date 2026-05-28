@@ -8,7 +8,7 @@ const projects = [
       "Built at IBM's Buckeye Hackathon (1st place). Tracks 100+ assets with live P&L, beta exposure, and tail-risk analytics (VaR, ES, Monte Carlo). Real-time data pipeline via Alpha Vantage and NewsAPI fires breach alerts within 3 seconds via EmailJS across 50+ monitored thresholds. SR 11-7–aligned AI governance layer with 25+ exportable audit reports.",
     tech: ["React.js", "Python", "Alpha Vantage", "EmailJS", "Monte Carlo"],
     link: "https://github.com/Sathv1kA/CLARA",
-    badge: "🥇 IBM Hackathon · 1st Place",
+    badge: "IBM Hackathon · 1st Place",
     badgeStyle: "text-yellow-600 bg-yellow-50 border-yellow-200",
     featured: true,
   },
@@ -19,7 +19,7 @@ const projects = [
       "Full-stack AI cost analyzer with <200ms average response time via FastAPI. Hybrid regex/AST detection pipeline supports 14 models, reducing estimated API costs by 30%+ per repo with token estimates accurate to ±10% via tiktoken.",
     tech: ["Python", "FastAPI", "TypeScript"],
     link: "https://github.com/Sathv1kA/LLMeter",
-    badge: "🥈 Anthropic OSU Hackathon · 2nd Place",
+    badge: "Anthropic Hackathon · 2nd Place",
     badgeStyle: "text-slate-500 bg-slate-100 border-slate-300",
     featured: false,
   },
@@ -84,7 +84,7 @@ export default function Projects() {
             href={featured.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="group block rounded-lg border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-md"
+            className="group block rounded-lg border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
           >
             <div className="flex flex-wrap items-start justify-between gap-3 mb-3">
               <h3 className="font-heading text-slate-800 font-bold text-xl">
@@ -125,7 +125,7 @@ export default function Projects() {
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group h-full block rounded-lg border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-md"
+                className="group h-full block rounded-lg border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
               >
                 <div className="flex flex-wrap items-start justify-between gap-2 mb-2">
                   <h3 className="font-heading text-slate-800 font-semibold text-lg">
